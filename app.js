@@ -11,7 +11,7 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a,b){ //eslint-disable-line
   var sumOfTwoNums = a + b;
   var message = 'The sum of ' + a + ' and ' + b + ' is ' + sumOfTwoNums + '.';
-  console.log([sumOfTwoNums, message]);
+  // console.log([sumOfTwoNums, message]);
   return [sumOfTwoNums, message];
 }
 
@@ -32,7 +32,7 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a,b){ //eslint-disable-line
   var product = a * b;
   var message = 'The product of ' + a + ' and ' + b + ' is ' + product + '.';
-  console.log(message);
+  // console.log(message);
   return [product, message];
 }
 
@@ -58,9 +58,8 @@ function sumAndMultiply(a,b,c){ //eslint-disable-line
   var secondElement = multiply(multiply(a, b)[0], c)[0];
   var sumMessage = a + ' and ' + b + ' and ' + c + ' sum to ' + firstElement + '.';
   var mulMessage = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + secondElement + '.';
-  //return [firstElement, product of three nums, see third and fourth element above]
-  console.log(sumMessage);
-  console.log(mulMessage);
+  // console.log(sumMessage);
+  // console.log(mulMessage);
   return [firstElement, secondElement, sumMessage, mulMessage];
 }
 
@@ -85,10 +84,9 @@ var testArray = [2,3,4]; //eslint-disable-line
 function sumArray(testArray){ //eslint-disable-line
   var firstSum = sum(testArray[0], testArray[1])[0];
   var secondSum = sum(firstSum, testArray[2])[0];
-  console.log(secondSum);
-
+  // console.log(secondSum);
   var message = testArray + ' was passed in as an array of numbers, and ' + secondSum + ' is their sum.';
-  console.log(message);
+  // console.log(message);
   return [secondSum, message];
   //
 }
@@ -112,10 +110,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-
+  var firstMul = multiply(testArray[0], testArray[1])[0];
+  var secondMul = multiply(firstMul, testArray[2])[0];
+  var message = 'The numbers ' + testArray + ' have a product of ' + secondMul + '.';
+  return [secondMul, message];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
